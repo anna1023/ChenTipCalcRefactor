@@ -6,7 +6,7 @@ public class TipCalculator {
     public TipCalculator(int numPeople, int tipPercentage) {
         this.numPeople = numPeople;
         this.tipPercentage = tipPercentage;
-        totalBillBeforeTip = 0.0;
+        totalBillBeforeTip = 1.0;
     }
 
     public double getTotalBillBeforeTip() {
@@ -19,7 +19,7 @@ public class TipCalculator {
       totalBillBeforeTip = totalBillBeforeTip+cost;
     }
     public double tipAmount(){
-        return (tipPercentage/100)*totalBillBeforeTip;
+        return ((double)tipPercentage/100)*totalBillBeforeTip;
     }
     public double totalBill (){
         return tipAmount()+totalBillBeforeTip;
